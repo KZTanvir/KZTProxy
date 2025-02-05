@@ -1,0 +1,19 @@
+proxies:
+- name: Localhost 1
+  type: http
+  server: 127.0.0.1
+  port: 1274
+- name: Localhost 2
+  type: http
+  server: 192.168.0.1
+  port: 12345
+
+
+proxy_groups:
+  - name: "LOADBALANCE"
+    proxies:
+      - Localhost 1
+      - Localhost 2
+
+system_id: 5385f7ea-a2f8-5106-abc0-61a955cb0783
+expiry_date: "2025-02-15 11:50:00"
